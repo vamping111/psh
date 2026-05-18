@@ -15,7 +15,7 @@ and an elegant shell-style way to execute processes.}
 
 Name:    python-%project_name
 Version: 0.2.12
-Release: 2.ROCKIT3%{?dist}
+Release: 2.ROCKIT4%{?dist}
 Summary: Process management library
 
 Group:   Development/Languages
@@ -38,6 +38,7 @@ BuildRequires: python%{python3_pkgversion}-setuptools
 %if 0%{with check}
 BuildRequires: python%{python3_pkgversion}-pcore
 BuildRequires: python%{python3_pkgversion}-psys >= 0.3
+BuildRequires: python%{python3_pkgversion}-setuptools <= 72.0.0
 BuildRequires: python%{python3_pkgversion}-pytest >= 2.2.4
 %endif
 Obsoletes: python36-%project_name
@@ -68,6 +69,9 @@ Conflicts: python36-%project_name
 
 
 %changelog
+* Mon May 18 2026 Linar Nasyyrov <lnasyyrov@k2.cloud> - 0.2.12-2.ROCKIT4
+- Add redos 8.0 support
+
 * Tue Jan 23 2023 Andrey Kulaev <adkulaev@gmail.com> - 0.2.12-2
 - Add centos 8.4 support
 
